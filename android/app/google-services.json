@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "260911985312",
+    "project_id": "clickaeventsp",
+    "storage_bucket": "clickaeventsp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260911985312:android:7789f4d940818c98334fc5",
+        "android_client_info": {
+          "package_name": "com.jakir.clickaeventsp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_suAvNmgfVEi-8CMIH1qqDWF3lZDxkgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
