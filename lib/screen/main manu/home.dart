@@ -13,10 +13,10 @@ class Home extends StatefulWidget {
 }
   int currentTab = 0;
   final List<Widget> screens = [
-     Deshbord(),
-     SearchPage(),
-     ProfilePage(),
-     Settings()
+     const Deshbord(),
+     const SearchPage(),
+     const ProfilePage(),
+     const Settings()
   ];
 
   final PageStorageBucket bucket = PageStorageBucket();
@@ -33,14 +33,14 @@ class _homeState extends State<Home> {
         child: currentScreen,
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: (){},
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
             notchMargin: 10,
-        child: Container(
+        child: SizedBox(
           height: 60,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -52,7 +52,7 @@ class _homeState extends State<Home> {
                      minWidth: 40,
                       onPressed: (){
                        setState(() {
-                         currentScreen = Deshbord();
+                         currentScreen = const Deshbord();
                          currentTab = 0;
                        });
                       },
@@ -73,7 +73,7 @@ class _homeState extends State<Home> {
                     minWidth: 40,
                     onPressed: (){
                       setState(() {
-                        currentScreen = SearchPage();
+                        currentScreen = const SearchPage();
                         currentTab = 1;
                       });
                     },
@@ -99,7 +99,7 @@ class _homeState extends State<Home> {
                     minWidth: 40,
                     onPressed: (){
                       setState(() {
-                        currentScreen = ProfilePage();
+                        currentScreen = const ProfilePage();
                         currentTab = 3;
                       });
                     },
@@ -120,7 +120,7 @@ class _homeState extends State<Home> {
                     minWidth: 40,
                     onPressed: (){
                       setState(() {
-                        currentScreen = Settings();
+                        currentScreen = const Settings();
                         currentTab = 4;
                       });
                     },

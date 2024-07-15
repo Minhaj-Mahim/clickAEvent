@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:share_plus/share_plus.dart';
 
 class Share extends StatefulWidget {
   const Share({super.key});
@@ -21,7 +19,7 @@ class _ShareState extends State<Share> {
         child: ElevatedButton(
           onPressed: () async{
            await Share.share('Share');
-          }, child: Text('Share App'),
+          }, child: const Text('Share App'),
         ),
       ),
     );

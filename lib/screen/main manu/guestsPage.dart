@@ -48,7 +48,7 @@ class _GuestsState extends State<Guests> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
-        title: Text('Create Event'),
+        title: const Text('Create Event'),
         centerTitle: true,
       ),
       body: BodyBackground(
@@ -59,7 +59,7 @@ class _GuestsState extends State<Guests> {
             child: ListView(
               children: <Widget>[
                 TextFormField(
-                  decoration: InputDecoration(labelText: 'Event Title'),
+                  decoration: const InputDecoration(labelText: 'Event Title'),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter a title';
@@ -70,7 +70,7 @@ class _GuestsState extends State<Guests> {
                     _title = value;
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   children: <Widget>[
                     Expanded(
@@ -80,16 +80,16 @@ class _GuestsState extends State<Guests> {
                     ),
                     TextButton(
                       onPressed: () => _selectDate(context),
-                      child: Text(
+                      child: const Text(
                         'Select Date',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextFormField(
-                  decoration: InputDecoration(labelText: 'Location'),
+                  decoration: const InputDecoration(labelText: 'Location'),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter a location';
@@ -100,9 +100,9 @@ class _GuestsState extends State<Guests> {
                     _location = value;
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextFormField(
-                  decoration: InputDecoration(labelText: 'Description'),
+                  decoration: const InputDecoration(labelText: 'Description'),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter a description';
@@ -113,10 +113,10 @@ class _GuestsState extends State<Guests> {
                     _description = value;
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: _submitForm,
-                  child: Text('Create Event'),
+                  child: const Text('Create Event'),
                 ),
               ],
             ),

@@ -9,6 +9,8 @@ class Transaction {
 }
 
 class BudgetPage extends StatefulWidget {
+  const BudgetPage({super.key});
+
   @override
   _BudgetPageState createState() => _BudgetPageState();
 }
@@ -31,7 +33,7 @@ class _BudgetPageState extends State<BudgetPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text('Budget Page'),
+        title: const Text('Budget Page'),
         centerTitle: true,
       ),
       body: BodyBackground(
@@ -41,26 +43,26 @@ class _BudgetPageState extends State<BudgetPage> {
             Card(
               elevation: 5,
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Text(
                   'Total Spending: \$${_totalSpent.toStringAsFixed(2)}',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
                 itemCount: _transactions.length,
                 itemBuilder: (ctx, index) {
                   return Card(
                     elevation: 3,
-                    margin: EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+                    margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
                     child: ListTile(
                       leading: CircleAvatar(
                         radius: 30,
                         child: Padding(
-                          padding: EdgeInsets.all(6),
+                          padding: const EdgeInsets.all(6),
                           child: FittedBox(
                             child: Text('\$${_transactions[index].amount}'),
                           ),
@@ -68,7 +70,7 @@ class _BudgetPageState extends State<BudgetPage> {
                       ),
                       title: Text(
                         _transactions[index].title,
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                       subtitle: Text(
                         'Spent on: ${_transactions[index].title}',
@@ -83,7 +85,7 @@ class _BudgetPageState extends State<BudgetPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _startAddNewTransaction(context),
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -101,7 +103,7 @@ class _BudgetPageState extends State<BudgetPage> {
 class NewTransaction extends StatelessWidget {
   final Function addTx;
 
-  NewTransaction(this.addTx);
+  NewTransaction(this.addTx, {super.key});
 
   final titleController = TextEditingController();
   final amountController = TextEditingController();
@@ -111,18 +113,18 @@ class NewTransaction extends StatelessWidget {
     return Card(
       elevation: 5,
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             TextField(
-              decoration: InputDecoration(labelText: 'Title'),
+              decoration: const InputDecoration(labelText: 'Title'),
               controller: titleController,
             ),
             TextField(
-              decoration: InputDecoration(labelText: 'Amount'),
+              decoration: const InputDecoration(labelText: 'Amount'),
               controller: amountController,
-              keyboardType: TextInputType.numberWithOptions(decimal: true),
+              keyboardType: const TextInputType.numberWithOptions(decimal: true),
             ),
             ElevatedButton(
               onPressed: () {
@@ -132,7 +134,7 @@ class NewTransaction extends StatelessWidget {
                 );
                 Navigator.of(context).pop();
               },
-              child: Text('Add Transaction'),
+              child: const Text('Add Transaction'),
             ),
           ],
         ),

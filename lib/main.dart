@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         '/CompleteProfileScreen': (context) => const CompleteProfileScreen(),
         '/Event': (context) => const Event(),
         '/home': (context) => const Home(),
-        '/Guests': (context) =>  Guests(),
+        '/Guests': (context) =>  const Guests(),
       },
     );
   }

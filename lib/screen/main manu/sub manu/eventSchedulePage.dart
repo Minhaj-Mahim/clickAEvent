@@ -12,7 +12,7 @@ class _EventSchedulePageState extends State<EventSchedulePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Center(child: Text("Event Schedule")),),
+        appBar: AppBar(title: const Center(child: Text("Event Schedule")),),
         body: SfCalendar(
           view: CalendarView.week,
           firstDayOfWeek: 6,

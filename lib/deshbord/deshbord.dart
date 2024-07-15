@@ -51,7 +51,7 @@ class _DeshbordState extends State<Deshbord> {
             InkWell(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-                  return Calendar();
+                  return const Calendar();
                 }));
               },
               child: Container(
@@ -117,7 +117,7 @@ class _DeshbordState extends State<Deshbord> {
             InkWell(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-                  return BudgetPage();
+                  return const BudgetPage();
                 }));
               },
               child: Container(

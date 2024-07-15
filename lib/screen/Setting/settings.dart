@@ -1,9 +1,7 @@
 import 'package:clickaeventsp/screen/main%20manu/home.dart';
 import 'package:clickaeventsp/screen/widgets/bodyBackground.dart';
 import 'package:clickaeventsp/style/style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -22,14 +20,14 @@ class _SettingsState extends State<Settings> {
         leading: IconButton(
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (BuildContext context) => Home()));
+                builder: (BuildContext context) => const Home()));
           },
           icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: BodyBackground(
         child: Container(
-          padding: EdgeInsets.only(left: 16, top: 25, right: 16),
+          padding: const EdgeInsets.only(left: 16, top: 25, right: 16),
           child: ListView(children: const [
             Text("Settings",
                 style: TextStyle(

@@ -71,7 +71,7 @@ class _FrontPageScreenState extends State<FrontPageScreen> {
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(12),
-                                  boxShadow: [const BoxShadow(blurRadius: 0.2)],
+                                  boxShadow: const [BoxShadow(blurRadius: 0.2)],
                                 ),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,

@@ -48,7 +48,7 @@ dependencies:
   firebase_ui_database: ^1.4.1
   firebase_dynamic_links: ^5.4.13
   hexcolor: ^3.0.1
-  fluttertoast: ^8.2.2
+  fluttertoast: ^8.2.6
   introduction_screen: ^3.1.12
   dots_indicator: ^2.0.0
   shared_preferences: ^2.2.1

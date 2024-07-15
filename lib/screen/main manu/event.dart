@@ -46,7 +46,7 @@ class _EventState extends State<Event> {
                           width: 100.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(24.0),
-                            boxShadow: [BoxShadow(
+                            boxShadow: const [BoxShadow(
                                 color: Colors.grey,
                                 blurRadius: 5
                             )],
@@ -64,19 +64,19 @@ class _EventState extends State<Event> {
                                   fit: BoxFit.fill,
                                 ),
                                 //SizedBox(height: 12.0,),
-                                Text('All Events',style: TextStyle(color: Colors.white),
+                                const Text('All Events',style: TextStyle(color: Colors.white),
                                   textAlign: TextAlign.center,)
                               ],
                             ),
                           ),
                         ),
-                        SizedBox(width: 24.0,),
+                        const SizedBox(width: 24.0,),
                         Container(
                           height: 100.0,
                           width: 100.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(24.0),
-                            boxShadow: [BoxShadow(
+                            boxShadow: const [BoxShadow(
                                 color: Colors.grey,
                                 blurRadius: 5
                             )],
@@ -94,13 +94,13 @@ class _EventState extends State<Event> {
                                   fit: BoxFit.fill,
                                 ),
                                 //SizedBox(height: 12.0,),
-                                Text('Birthday',style: TextStyle(color: Colors.white),
+                                const Text('Birthday',style: TextStyle(color: Colors.white),
                                   textAlign: TextAlign.center,)
                               ],
                             ),
                           ),
                         ),
-                        SizedBox(width: 24.0,),
+                        const SizedBox(width: 24.0,),
                         Container(
                           height: 100.0,
                           width: 100.0,
@@ -120,13 +120,13 @@ class _EventState extends State<Event> {
                                   fit: BoxFit.fill,
                                 ),
                                 //SizedBox(height: 12.0,),
-                                Text('Wedding',style: TextStyle(color: Colors.white),
+                                const Text('Wedding',style: TextStyle(color: Colors.white),
                                   textAlign: TextAlign.center,)
                               ],
                             ),
                           ),
                         ),
-                        SizedBox(width: 24.0,),
+                        const SizedBox(width: 24.0,),
                         Container(
                           height: 100.0,
                           width: 100.0,
@@ -146,7 +146,7 @@ class _EventState extends State<Event> {
                                   fit: BoxFit.fill,
                                 ),
                                 //SizedBox(height: 12.0,),
-                                Text('Anniversary',style: TextStyle(color:Colors.white),
+                                const Text('Anniversary',style: TextStyle(color:Colors.white),
                                   textAlign: TextAlign.center,)
                               ],
                             ),
@@ -155,9 +155,9 @@ class _EventState extends State<Event> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 24.0,),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0.0, 0.0, 35.0, 0.0),
+                  const SizedBox(height: 24.0,),
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(0.0, 0.0, 35.0, 0.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -166,7 +166,7 @@ class _EventState extends State<Event> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 18.0,),
+                  const SizedBox(height: 18.0,),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -177,13 +177,13 @@ class _EventState extends State<Event> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(24.0),
                               image: DecorationImage(
-                                  image: AssetImage('assets/images/brithday.jpg'),
+                                  image: const AssetImage('assets/images/brithday.jpg'),
                                   fit: BoxFit.cover,
                                   colorFilter: ColorFilter.mode(Colors.black87.withOpacity(0.4), BlendMode.darken)
                               )
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(24.0, 0.0, 0.0, 10.0),
+                          child: const Padding(
+                            padding: EdgeInsets.fromLTRB(24.0, 0.0, 0.0, 10.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.end,
@@ -207,20 +207,20 @@ class _EventState extends State<Event> {
                             ),
                           ),
                         ),
-                        SizedBox(width: 18.0,),
+                        const SizedBox(width: 18.0,),
                         Container(
                           height: 140.0,
                           width: 250.0,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(24.0),
                               image: DecorationImage(
-                                  image: AssetImage('assets/images/wedding1.jpg'),
+                                  image: const AssetImage('assets/images/wedding1.jpg'),
                                   fit: BoxFit.cover,
                                   colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.darken)
                               )
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(24.0, 0.0, 0.0, 10.0),
+                          child: const Padding(
+                            padding: EdgeInsets.fromLTRB(24.0, 0.0, 0.0, 10.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.end,
@@ -244,20 +244,20 @@ class _EventState extends State<Event> {
                             ),
                           ),
                         ),
-                        SizedBox(width: 18.0,),
+                        const SizedBox(width: 18.0,),
                         Container(
                           height: 140.0,
                           width: 250.0,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(24.0),
                               image: DecorationImage(
-                                  image: AssetImage('assets/images/anniversary.jpg'),
+                                  image: const AssetImage('assets/images/anniversary.jpg'),
                                   fit: BoxFit.cover,
                                   colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.darken)
                               )
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(24.0, 0.0, 0.0, 10.0),
+                          child: const Padding(
+                            padding: EdgeInsets.fromLTRB(24.0, 0.0, 0.0, 10.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.end,
@@ -284,12 +284,12 @@ class _EventState extends State<Event> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20.0,),
+                  const SizedBox(height: 20.0,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text('Your location',),
-                      SizedBox(height: 18.0,),
+                      const Text('Your location',),
+                      const SizedBox(height: 18.0,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
@@ -299,12 +299,12 @@ class _EventState extends State<Event> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(24.0),
                                 image: DecorationImage(
-                                  image: AssetImage('assets/images/location.png'),
+                                  image: const AssetImage('assets/images/location.png'),
                                   fit: BoxFit.cover,
                                   colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.75), BlendMode.darken),
                                 )
                             ),
-                            child: Column(
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
@@ -312,19 +312,19 @@ class _EventState extends State<Event> {
                               ],
                             ),
                           ),
-                          SizedBox(width: 18.0,),
+                          const SizedBox(width: 18.0,),
                           Container(
                             height: 110.0,
                             width: 170.0,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(24.0),
                                 image: DecorationImage(
-                                  image: AssetImage('assets/images/location1.png'),
+                                  image: const AssetImage('assets/images/location1.png'),
                                   fit: BoxFit.cover,
                                   colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.75), BlendMode.darken),
                                 )
                             ),
-                            child: Column(
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[

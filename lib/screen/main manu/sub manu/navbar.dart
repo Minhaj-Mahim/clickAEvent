@@ -1,6 +1,5 @@
 import 'package:clickaeventsp/onboarding_screen/login_screen.dart';
 import 'package:clickaeventsp/style/style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Navbar extends StatelessWidget {
@@ -15,8 +14,8 @@ class Navbar extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
-            accountName: Text("Minhaj Mahim"),
-            accountEmail: Text("contact.minhajmahim@gmail.com"),
+            accountName: const Text("Minhaj Mahim"),
+            accountEmail: const Text("contact.minhajmahim@gmail.com"),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
                 child: Image.asset(
@@ -27,32 +26,32 @@ class Navbar extends StatelessWidget {
                 ),
               ),
             ),
-            decoration: BoxDecoration(color: colorRed),
+            decoration: const BoxDecoration(color: colorRed),
           ),
           ListTile(
-            leading: Icon(Icons.favorite),
-            title: Text("Favorite"),
+            leading: const Icon(Icons.favorite),
+            title: const Text("Favorite"),
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.people),
-            title: Text("Friends"),
+            leading: const Icon(Icons.people),
+            title: const Text("Friends"),
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.share),
-            title: Text("Share"),
+            leading: const Icon(Icons.share),
+            title: const Text("Share"),
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text("Request"),
+            leading: const Icon(Icons.notifications),
+            title: const Text("Request"),
             trailing: ClipOval(
               child: Container(
                 color: Colors.red,
                 width: 20,
                 height: 20,
-                child: Center(
+                child: const Center(
                     child: Text(
                   "10",
                   style: TextStyle(color: Colors.white, fontSize: 12),
@@ -61,24 +60,24 @@ class Navbar extends StatelessWidget {
             ),
             onTap: () {},
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text("Settings"),
+            leading: const Icon(Icons.settings),
+            title: const Text("Settings"),
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.file_copy),
-            title: Text("Policies"),
+            leading: const Icon(Icons.file_copy),
+            title: const Text("Policies"),
             onTap: () {},
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: Icon(Icons.exit_to_app),
-            title: Text("Log Out"),
+            leading: const Icon(Icons.exit_to_app),
+            title: const Text("Log Out"),
             onTap: () {
               Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()));
+                  MaterialPageRoute(builder: (context) => const LoginScreen()));
             },
           ),
         ],

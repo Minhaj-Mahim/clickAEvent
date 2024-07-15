@@ -1,9 +1,8 @@
 import 'package:clickaeventsp/screen/widgets/bodyBackground.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CheckList extends StatefulWidget {
-  const CheckList({Key? key}) : super(key: key);
+  const CheckList({super.key});
 
   @override
   State<CheckList> createState() => _CheckListState();
@@ -24,7 +23,7 @@ class _CheckListState extends State<CheckList> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
-        duration: Duration(seconds: 2),
+        duration: const Duration(seconds: 2),
       ),
     );
   }
@@ -34,16 +33,16 @@ class _CheckListState extends State<CheckList> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text("CheckList"),
+        title: const Text("CheckList"),
         centerTitle: true,
       ),
       body: BodyBackground(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "Event CheckList",
                 style: TextStyle(
                   color: Colors.black,
@@ -51,7 +50,7 @@ class _CheckListState extends State<CheckList> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               // Display existing items
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,7 +70,7 @@ class _CheckListState extends State<CheckList> {
                       ),
                       Text(
                         item.title,
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                       )
                     ],
                   );
@@ -89,12 +88,12 @@ class _CheckListState extends State<CheckList> {
             builder: (BuildContext context) {
               String newTitle = '';
               return AlertDialog(
-                title: Text("Add Item"),
+                title: const Text("Add Item"),
                 content: TextField(
                   onChanged: (value) {
                     newTitle = value;
                   },
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Enter title",
                   ),
                 ),
@@ -103,7 +102,7 @@ class _CheckListState extends State<CheckList> {
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
-                    child: Text('Cancel'),
+                    child: const Text('Cancel'),
                   ),
                   TextButton(
                     onPressed: () {
@@ -112,15 +111,15 @@ class _CheckListState extends State<CheckList> {
                         Navigator.of(context).pop();
                       }
                     },
-                    child: Text('Add'),
+                    child: const Text('Add'),
                   ),
                 ],
               );
             },
           );
         },
-        child: Icon(Icons.add),
         backgroundColor: Colors.red,
+        child: const Icon(Icons.add),
       ),
     );
   }
